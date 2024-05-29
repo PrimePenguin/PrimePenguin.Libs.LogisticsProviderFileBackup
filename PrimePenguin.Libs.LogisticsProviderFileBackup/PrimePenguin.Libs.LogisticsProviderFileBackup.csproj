@@ -8,6 +8,17 @@
     <PackageId>PrimePenguin.Libs.LogisticsProviderFileBackup</PackageId>
     <Version>0.0.1</Version>
   </PropertyGroup>
+  <PropertyGroup>
+		<Description>This small library is a file upload util used by logistic provider implementations to upload backup files to the Prime Penguin cloud.</Description>
+		<Authors>Lars J. Nilsson</Authors>
+		<Copyright>Prime Penguin</Copyright>
+		<PackageLicenseUrl>https://raw.githubusercontent.com/PrimePenguin/PrimePenguin.Libs.LogisticsProviderFileBackup/LICENSE</PackageLicenseUrl>
+		<PackageProjectUrl>https://github.com/PrimePenguin/PrimePenguin.Libs.LogisticsProviderFileBackup</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/PrimePenguin/PrimePenguin.Libs.LogisticsProviderFileBackup</RepositoryUrl>
+		<PackageTags>Logiwa,WMS</PackageTags>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageIconUrl>https://raw.githubusercontent.com/PrimePenguin/PrimePenguin.Libs.LogisticsProviderFileBackup/main/PrimePenguin.png</PackageIconUrl>
+	</PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Azure.Storage.Blob" Version="11.2.2" />

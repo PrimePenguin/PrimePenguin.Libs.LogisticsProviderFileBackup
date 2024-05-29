@@ -1,0 +1,27 @@
+version: 0.0.{build}
+pull_requests:
+  do_not_increment_build_number: true
+image: Visual Studio 2022
+build_script:
+  - ps: ./scripts/build.ps1
+environment:
+  APPVEYOR_REPO_TAG: true
+artifacts:
+  - path: PrimePenguinSharp/bin/Release/netcoreapp2.2
+    name: netcoreapp22
+  - path: PrimePenguinSharp/bin/Release/net461
+    name: net461
+skip_commits:
+  message: /\[skip\]/
+  files:
+    - readme.md
+    - LICENSE
+    - .gitignore
+    - .vscode/*
+    - changelog.md
+deploy:
+  - provider: NuGet
+    api_key:
+      secure: 3+SMfp5rep5P8lVD7/ayZxwcFcoOf1h9eDYKxqtHBKvFx0H3fc0OEg9ncK6von8l
+    on:
+      branch: main
